@@ -11,17 +11,17 @@ source:
   sha256: adfef8e4e374fcb2c7bbeac8f42599e5b24f0c47fa122cf73dcd574675717071
 
 build:
+  noarch: python
   number: 0
-  skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
-    - dataclasses  # [py<37]
-    - python
+    - dataclasses
+    - python >=3.6
     - typing_inspect
 
 test:
