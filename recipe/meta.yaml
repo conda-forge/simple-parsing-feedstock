@@ -18,6 +18,7 @@ build:
 requirements:
   host:
     - pip
+    - pre-commit
     - python >=3.6
   run:
     - dataclasses
