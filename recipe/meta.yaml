@@ -1,5 +1,5 @@
 {% set name = "simple-parsing" %}
-{% set version = "0.0.16.post2" %}
+{% set version = "0.0.17" %}
 
 
 package:
@@ -8,20 +8,21 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/simple_parsing-{{ version }}.tar.gz
-  sha256: e1b1dd83e770feca7b78c3caf471ee9d9ad7b71ada43149594a63616ffb7d640
+  sha256: adfef8e4e374fcb2c7bbeac8f42599e5b24f0c47fa122cf73dcd574675717071
 
 build:
+  noarch: python
   number: 0
-  skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - pre-commit
+    - python >=3.6
   run:
-    - dataclasses  # [py<37]
-    - python
+    - dataclasses
+    - python >=3.6
     - typing_inspect
 
 test:
