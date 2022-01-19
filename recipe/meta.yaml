@@ -34,7 +34,7 @@ test:
     - simple_parsing.wrappers
   commands:
     - pip check
-    - pytest -vvv --capture=tee-sys test
+    - pytest -vvv --capture=tee-sys .
   requires:
     - pip
     - pytest
