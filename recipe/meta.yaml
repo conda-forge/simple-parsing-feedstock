@@ -1,5 +1,5 @@
 {% set name = "simple-parsing" %}
-{% set version = "0.0.17" %}
+{% set version = "0.0.18" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/simple_parsing-{{ version }}.tar.gz
-  sha256: adfef8e4e374fcb2c7bbeac8f42599e5b24f0c47fa122cf73dcd574675717071
+  sha256: 8cdd8e2c5b7bf99d579027a6d12ef88218a1dc9b121cd5762820565a734eee82
 
 build:
   noarch: python
@@ -29,6 +29,7 @@ test:
   imports:
     - simple_parsing
     - simple_parsing.helpers
+    - simple_parsing.wrappers
   commands:
     - pip check
   requires:
