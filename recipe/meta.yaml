@@ -21,7 +21,7 @@ requirements:
     - pre-commit
     - python >=3.6
   run:
-    - dataclasses
+    - docstring-parser ~=0.15
     - python >=3.6
     - typing_inspect
 
