@@ -26,20 +26,14 @@ requirements:
     - typing_inspect
 
 test:
-  source_files:
-    - test
   imports:
     - simple_parsing
     - simple_parsing.helpers
     - simple_parsing.wrappers
   commands:
     - pip check
-    - touch test/__init__.py
-    - pytest -vvv --capture=tee-sys test
   requires:
     - pip
-    - pytest
-    - pyyaml
 
 about:
   home: https://github.com/lebrice/SimpleParsing
