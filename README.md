@@ -1,11 +1,11 @@
-About simple-parsing
-====================
+About simple-parsing-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/simple-parsing-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/lebrice/SimpleParsing
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/simple-parsing-feedstock/blob/main/LICENSE.txt)
 
 Summary: A small utility for simplifying and cleaning up argument parsing scripts.
 
