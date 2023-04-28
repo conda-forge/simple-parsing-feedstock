@@ -1,5 +1,5 @@
 {% set name = "simple-parsing" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.2.post1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/simple_parsing-{{ version }}.tar.gz
-  sha256: c41207b7f994a6bc4aec41e7f3b4be19a5801f592a8006a7bd34a8efccca1ecc
+  sha256: 7a330a0e482e60e4b5432db04d81e7c6a98b59e32fb4c597337a5efe833e262f
 
 build:
   noarch: python
