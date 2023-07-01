@@ -12,24 +12,23 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - pre-commit
-    - python >=3.6
+    - python >=3.7
   run:
     - docstring_parser ~=0.15
-    - python >=3.6
-    - typing_inspect
+    - python >=3.7
+    - typing_extensions >=4.5.0
 
 test:
+  
   imports:
     - simple_parsing
-    - simple_parsing.helpers
-    - simple_parsing.wrappers
   commands:
     - pip check
   requires:
