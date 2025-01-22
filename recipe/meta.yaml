@@ -22,7 +22,7 @@ requirements:
     - poetry-dynamic-versioning >=1.0.0,<2.0.0
     - python {{ python_min }}
   run:
-    - docstring_parser ~=0.15
+    - docstring_parser >=0.15,<1.dev0
     - python >={{ python_min }},<4.0
     - typing_extensions >=4.5.0
 
