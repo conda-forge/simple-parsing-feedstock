@@ -18,8 +18,8 @@ build:
 requirements:
   host:
     - pip
-    - poetry-core >=1.0.0
-    - poetry-dynamic-versioning >=1.0.0,<2.0.0
+    - hatchling
+    - uv-dynamic-versioning
     - python {{ python_min }}
   run:
     - docstring_parser >=0.15,<1.dev0
