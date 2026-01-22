@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  name: simple-parsing
+  version: 0.1.8
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/simple_parsing-${{ version }}.tar.gz
+  sha256: 19c2a9002ebd7ad281fce579f9b2a0aa0c4d67e1688cee0e8cdf6d8e98ec2c18
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - hatchling
+    - uv-dynamic-versioning
+    - python ${{ python_min }}.*
+  run:
+    - docstring_parser >=0.15,<1.dev0
+    - python >=${{ python_min }},<4.0
+    - typing_extensions >=4.5.0
+
+tests:
+  - python:
+      imports:
+        - simple_parsing
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: A small utility for simplifying and cleaning up argument parsing scripts.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/lebrice/SimpleParsing
+
+extra:
+  recipe-maintainers:
+    - thewchan
