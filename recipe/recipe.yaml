@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: simple-parsing
-  version: 0.1.8
+  version: "0.1.9"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/simple_parsing-${{ version }}.tar.gz
-  sha256: 19c2a9002ebd7ad281fce579f9b2a0aa0c4d67e1688cee0e8cdf6d8e98ec2c18
+  sha256: 0ff184ebaa6606420989ddbcb5650b21c62e2a59ec5388bc76c3343bda872cde
 
 build:
   number: 0
